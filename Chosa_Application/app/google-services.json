@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "226334515490",
+    "firebase_url": "https://chosadb1-default-rtdb.firebaseio.com",
+    "project_id": "chosadb1",
+    "storage_bucket": "chosadb1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226334515490:android:cf0664e4d790785f5b857b",
+        "android_client_info": {
+          "package_name": "com.example.chosa_application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv4ps7bzWmYP52xXoFU574wFZQFbsvjpY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

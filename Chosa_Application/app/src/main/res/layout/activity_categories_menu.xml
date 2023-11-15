@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/orgButton2"
+        android:layout_width="189dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="13dp"
+        android:backgroundTint="@color/grey"
+        android:text="CREATE ORGANISATION"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orgButton" />
+
+    <Button
+        android:id="@+id/orgButton"
+        android:layout_width="189dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="13dp"
+        android:backgroundTint="@color/grey"
+        android:text="VIEW ORGANISATIONS"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/orgButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Organisations Menu"
+        android:textColor="#FFFDFD"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catButton4" />
+
+    <Button
+        android:id="@+id/catButton4"
+        android:layout_width="189dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/grey"
+        android:text="CREATE CATEGORY"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catButton2" />
+
+    <Button
+        android:id="@+id/catButton2"
+        android:layout_width="189dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/grey"
+        android:text="VIEW CATEGORIES"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Button
+        android:id="@+id/dashButton"
+        android:layout_width="117dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="186dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/grey"
+        android:text="DASHBOARD"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orgButton2" />
+
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="117dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/grey"
+        android:text="HOME"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orgButton2" />
+
+    <Button
+        android:id="@+id/catButton"
+        android:layout_width="117dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="173dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="@color/grey"
+        android:text="CATEGORIES"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dashButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/homeButton"
+        app:layout_constraintTop_toBottomOf="@+id/orgButton2" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:text="Categories Menu"
+        android:textColor="#FFFDFD"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

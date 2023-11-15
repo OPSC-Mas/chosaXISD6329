@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".DonationActivity">
+
+
+    <ImageView
+        android:id="@+id/backB3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="380dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="243dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="20dp"
+        android:text="Thank you for choosing one of our organisations. Please select your donation type below."
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="117dp"
+        android:layout_marginEnd="146dp"
+        android:text="Donations Menu"
+        android:textColor="#FFFDFD"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="250dp"
+        android:layout_height="233dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="188dp"
+        android:background="@drawable/border"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/catButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/clothingButton"
+            android:layout_width="189dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="35dp"
+            android:backgroundTint="@color/blue"
+            android:text="CLOTHING"
+            android:textSize="12dp"
+            tools:layout_editor_absoluteX="111dp" />
+
+        <Button
+            android:id="@+id/foodButton"
+            android:layout_width="189dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="35dp"
+            android:backgroundTint="@color/blue"
+            android:text="FOOD"
+            android:textSize="12dp"
+            tools:layout_editor_absoluteX="112dp" />
+
+        <Button
+            android:id="@+id/fundsButton"
+            android:layout_width="189dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="35dp"
+            android:backgroundTint="@color/blue"
+            android:text="FUNDS"
+            android:textSize="12dp"
+            tools:layout_editor_absoluteX="112dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/dashButton"
+        android:layout_width="117dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="188dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/grey"
+        android:text="DASHBOARD"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="117dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="189dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/grey"
+        android:text="HOME"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/catButton"
+        android:layout_width="117dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/grey"
+        android:text="CATEGORIES"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dashButton"
+        app:layout_constraintStart_toEndOf="@+id/homeButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
