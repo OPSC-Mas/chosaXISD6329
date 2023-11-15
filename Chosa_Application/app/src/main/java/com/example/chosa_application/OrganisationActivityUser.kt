@@ -3,6 +3,7 @@ package com.example.chosa_application
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chosa_application.databinding.ActivityOrganisationUserBinding
@@ -32,7 +33,12 @@ class OrganisationActivityUser : AppCompatActivity() {
         if (selectedCategory != null) {
             fetchOrganizations(selectedCategory)
         } else {
-            // Handle the case where no category is selected, e.g., show an error message.
+            Toast.makeText(
+                this,
+                "Unable to fetch category for organisations.",
+                Toast.LENGTH_SHORT
+            ).show()
+
         }
 
         orgAdapter.setOnItemClickListener(object : OrgAdapter.OnItemClickListener {

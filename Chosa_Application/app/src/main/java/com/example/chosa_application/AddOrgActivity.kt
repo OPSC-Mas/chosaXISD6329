@@ -1,6 +1,7 @@
 package com.example.chosa_application
 
 import android.R
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -83,6 +84,10 @@ class AddOrgActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Please Enter All Required Fields.", Toast.LENGTH_SHORT).show()
             }
+        }
+        binding.backB.setOnClickListener {
+            val intent = Intent(this,CategoriesMenu::class.java)
+            startActivity(intent)
         }
     }
 }

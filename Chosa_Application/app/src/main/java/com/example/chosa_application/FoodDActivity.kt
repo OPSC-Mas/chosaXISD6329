@@ -1,6 +1,7 @@
 package com.example.chosa_application
 
 import android.R
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -62,6 +63,11 @@ class FoodDActivity : AppCompatActivity() {
                 // Handle database error
             }
         })
+
+        binding.backB4.setOnClickListener {
+            val intent = Intent(this, DonationActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.createFoodDon.setOnClickListener {
             val donContent = binding.editTextTextPersonName4.text.toString()
