@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="94dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/dashCard"
     android:layout_marginStart="12dp"
@@ -9,11 +9,12 @@
     android:layout_marginHorizontal="10dp"
     android:layout_marginVertical="10dp"
     app:cardElevation="8dp"
-    app:cornerRadius="20dp">
+    app:cornerRadius="20dp"
+    app:cardBackgroundColor="@android:color/transparent">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="74dp">
+        android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/donType"
@@ -22,25 +23,26 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="124dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="128dp"
             android:text="Don Type"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="13sp" />
 
         <TextView
             android:id="@+id/donCont"
-            android:layout_width="245dp"
-            android:layout_height="23dp"
+            android:layout_width="359dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/donType"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="76dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="78dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="15dp"
             android:text="Don Content"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="13sp" />
 
         <TextView
@@ -55,7 +57,7 @@
             android:layout_marginEnd="70dp"
             android:text="Org Name"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="13sp" />
 
     </RelativeLayout>

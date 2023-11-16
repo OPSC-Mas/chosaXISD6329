@@ -42,7 +42,7 @@ class DonationActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.backB3.setOnClickListener {
-            val intent = Intent(this, OrganisationActivityUser::class.java)
+            val intent = Intent(this, CategoriesActivityUser::class.java)
             startActivity(intent)
         }
     }
