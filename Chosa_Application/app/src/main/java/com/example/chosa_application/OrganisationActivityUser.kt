@@ -72,26 +72,31 @@ class OrganisationActivityUser : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.backToCat.setOnClickListener {
+            val intent = Intent(this, CategoriesActivityUser::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun fetchOrganizations(category: String) {
-        val orgRef =
-            FirebaseDatabase.getInstance().getReference("organisations")
-        orgRef.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                orgList.clear()
-                for (orgSnapshot in snapshot.children) {
-                    val orgModel = orgSnapshot.getValue(OrgModel::class.java)
-                    if (orgModel != null) {
-                        orgList.add(orgModel)
+        val orgRef = FirebaseDatabase.getInstance().getReference("organisations")
+        orgRef.orderByChild("category").equalTo(category)
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    orgList.clear()
+                    for (orgSnapshot in snapshot.children) {
+                        val orgModel = orgSnapshot.getValue(OrgModel::class.java)
+                        if (orgModel != null) {
+                            orgList.add(orgModel)
+                        }
                     }
+                    orgAdapter.notifyDataSetChanged()
                 }
-                orgAdapter.notifyDataSetChanged()
-            }
 
-            override fun onCancelled(error: DatabaseError) {
-                // Handle database error
-            }
-        })
+                override fun onCancelled(error: DatabaseError) {
+                    Toast.makeText(this@OrganisationActivityUser, "Error fetching data", Toast.LENGTH_SHORT).show()
+                }
+            })
     }
 }
