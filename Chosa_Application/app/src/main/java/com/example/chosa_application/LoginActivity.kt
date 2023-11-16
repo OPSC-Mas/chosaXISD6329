@@ -14,8 +14,8 @@ import com.google.firebase.database.ValueEventListener
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginActivityBinding
-    private lateinit var firebaseAuth: FirebaseAuth
-    private lateinit var dbRef: FirebaseDatabase
+    lateinit var firebaseAuth: FirebaseAuth
+    lateinit var dbRef: FirebaseDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,7 +65,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     // Function to sign in with email and password
-    private fun signIn(email: String, password: String) {
+    fun signIn(email: String, password: String) {
         firebaseAuth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {

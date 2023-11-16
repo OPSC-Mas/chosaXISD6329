@@ -27,7 +27,7 @@ class DashboardActivity : AppCompatActivity() {
                 startActivity(intent)
         }
         binding.catButton.setOnClickListener {
-                val intent = Intent(this, CategoriesActivityUser::class.java)
+                val intent = Intent(this, CategoriesMenu::class.java)
                 startActivity(intent)
         }
         binding.dashButton.setOnClickListener {

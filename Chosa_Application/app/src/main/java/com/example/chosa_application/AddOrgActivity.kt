@@ -15,10 +15,10 @@ import java.util.*
 
 class AddOrgActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityAddOrgBinding
-    private lateinit var dbRef: DatabaseReference
-    private lateinit var catSpinner: Spinner
-    private var selectedCategory: String? = null
+    lateinit var binding: ActivityAddOrgBinding
+    lateinit var dbRef: DatabaseReference
+    lateinit var catSpinner: Spinner
+    var selectedCategory: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -10,8 +10,8 @@ import com.google.firebase.database.FirebaseDatabase
 
 class AddCategoryActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityAddCategoryBinding
-    private lateinit var dbRef: DatabaseReference
+    lateinit var binding: ActivityAddCategoryBinding
+    lateinit var dbRef: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
