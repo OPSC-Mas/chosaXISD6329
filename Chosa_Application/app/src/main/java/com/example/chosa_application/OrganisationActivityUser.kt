@@ -3,6 +3,7 @@ package com.example.chosa_application
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chosa_application.databinding.ActivityOrganisationUserBinding
@@ -32,7 +33,12 @@ class OrganisationActivityUser : AppCompatActivity() {
         if (selectedCategory != null) {
             fetchOrganizations(selectedCategory)
         } else {
-            // Handle the case where no category is selected, e.g., show an error message.
+            Toast.makeText(
+                this,
+                "Unable to fetch category for organisations.",
+                Toast.LENGTH_SHORT
+            ).show()
+
         }
 
         orgAdapter.setOnItemClickListener(object : OrgAdapter.OnItemClickListener {
@@ -66,26 +72,31 @@ class OrganisationActivityUser : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.backToCat.setOnClickListener {
+            val intent = Intent(this, CategoriesActivityUser::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun fetchOrganizations(category: String) {
-        val orgRef =
-            FirebaseDatabase.getInstance().getReference("organisations")
-        orgRef.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                orgList.clear()
-                for (orgSnapshot in snapshot.children) {
-                    val orgModel = orgSnapshot.getValue(OrgModel::class.java)
-                    if (orgModel != null) {
-                        orgList.add(orgModel)
+        val orgRef = FirebaseDatabase.getInstance().getReference("organisations")
+        orgRef.orderByChild("category").equalTo(category)
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    orgList.clear()
+                    for (orgSnapshot in snapshot.children) {
+                        val orgModel = orgSnapshot.getValue(OrgModel::class.java)
+                        if (orgModel != null) {
+                            orgList.add(orgModel)
+                        }
                     }
+                    orgAdapter.notifyDataSetChanged()
                 }
-                orgAdapter.notifyDataSetChanged()
-            }
 
-            override fun onCancelled(error: DatabaseError) {
-                // Handle database error
-            }
-        })
+                override fun onCancelled(error: DatabaseError) {
+                    Toast.makeText(this@OrganisationActivityUser, "Error fetching data", Toast.LENGTH_SHORT).show()
+                }
+            })
     }
 }

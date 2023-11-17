@@ -1,6 +1,7 @@
 package com.example.chosa_application
 
 import android.R
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
@@ -63,6 +64,11 @@ class ClothingDActivity : AppCompatActivity() {
                 // Handle database error
             }
         })
+
+        binding.backB6.setOnClickListener {
+            val intent = Intent(this, DonationActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.createClothingDon.setOnClickListener {
             val donContent = binding.editTextTextPersonName4.text.toString()

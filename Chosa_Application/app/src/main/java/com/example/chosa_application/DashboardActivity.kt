@@ -23,11 +23,11 @@ class DashboardActivity : AppCompatActivity() {
 
         //navigation
         binding.homeButton.setOnClickListener {
-                val intent = Intent(this, MainActivityUser::class.java)
+                val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
         }
         binding.catButton.setOnClickListener {
-                val intent = Intent(this, CategoriesActivityUser::class.java)
+                val intent = Intent(this, CategoriesMenu::class.java)
                 startActivity(intent)
         }
         binding.dashButton.setOnClickListener {
